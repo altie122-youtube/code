@@ -3,7 +3,7 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "My Site",
+  title: "Code122",
   tagline: "Dinosaurs are cool",
   favicon: "img/favicon.ico",
 
@@ -37,6 +37,49 @@ const config: Config = {
         path: "docs", // Specify the folder of your documentation
       },
     ],
+    [
+      "@docusaurus/plugin-sitemap",
+      {
+        lastmod: "date",
+        changefreq: "weekly",
+        priority: 0.5,
+        ignorePatterns: ["/tags/**"],
+        filename: "sitemap.xml",
+        createSitemapItems: async (params) => {
+          const { defaultCreateSitemapItems, ...rest } = params;
+          const items = await defaultCreateSitemapItems(rest);
+          return items.filter((item) => !item.url.includes("/page/"));
+        },
+      },
+    ],
+    [
+      "@docusaurus/plugin-pwa",
+      {
+        debug: true,
+        offlineModeActivationStrategies: [
+          "appInstalled",
+          "standalone",
+          "queryString",
+        ],
+        pwaHead: [
+          {
+            tagName: "link",
+            rel: "icon",
+            href: "/img/icon.png",
+          },
+          {
+            tagName: "link",
+            rel: "manifest",
+            href: "/manifest.json", // your PWA manifest
+          },
+          {
+            tagName: "meta",
+            name: "theme-color",
+            content: "rgb(194, 37, 70)",
+          },
+        ],
+      },
+    ],
   ],
   presets: [
     [
@@ -65,7 +108,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/banner.jpg",
     navbar: {
       title: "Code122",
       logo: {
@@ -94,7 +137,7 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "Tutorial",
+              label: "Tutorials",
               to: "/docs/intro",
             },
           ],
