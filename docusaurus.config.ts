@@ -14,9 +14,9 @@ const config: Config = {
   baseUrl: '/',
 
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  // https://github.com/altie122-youtube/code.git
+  organizationName: 'altie122-youtube', // Usually your GitHub org/user name.
+  projectName: 'code', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -66,9 +66,9 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'Code122',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Code122 Logo',
         src: 'img/logo.svg',
       },
       items: [
