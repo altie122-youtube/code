@@ -4,7 +4,9 @@ sidebar_position: 1
 
 # What is HTML?
 
-HTML or Hyper Text Markup Language is how you make the page displayed by the browser.
+HTML or Hyper Text Markup Language is the standard way how you make the page that is displayed by the browser.
+
+Html is how the page is structured, it consists of a series of elements. The elements tell the browser how to display the content you write.
 
 ## Basic skeleton
 

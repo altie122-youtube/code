@@ -1,12 +1,18 @@
 {
-  "theme_color": "#450a0a",
-  "background_color": "#0f172a",
+  "theme_color": "#C22546",
+  "background_color": "#C22546",
   "display": "standalone",
-  "scope": "/",
-  "start_url": "/",
+  "scope": "./",
+  "start_url": "./index.html",
   "name": "Code122",
   "short_name": "Code122",
   "description": "the Code122 website by Altie122",
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://code122.pages.dev/manifest.json"
+    }
+  ],
   "icons": [
     {
       "src": "/img/icon-192x192.png",
